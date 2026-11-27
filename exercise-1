@@ -1,0 +1,56 @@
+function multiply(num1, num2, num3) {
+    return num1 * num2 * num3;
+}
+
+console.log(multiply(2, 3, 4));
+
+let convertToSeconds = function(minutes) {
+    return minutes * 60;
+};
+
+console.log(convertToSeconds(5));
+
+function fahrenheitToCelsius(temperature) {
+    return (temperature - 32) * 5 / 9;
+}
+
+console.log(fahrenheitToCelsius(100));
+
+function reverseString(word) {
+    return word.split("").reverse().join("");
+}
+
+console.log(reverseString("Javascript"));
+
+function countVowels(sentence) {
+    let count = 0;
+    let vowels = "aeiou";
+
+    for (let i = 0; i < sentence.length; i++) {
+        if (vowels.includes(sentence[i].toLowerCase())) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+console.log(countVowels("Javascript"));
+
+function isPrime(number) {
+    if (number <= 1) {
+        return false;
+    }
+
+    for (let i = 2; i < number; i++) {
+        if (number % i === 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+console.log(isPrime(2));
+console.log(isPrime(4));
+console.log(isPrime(7));
+console.log(isPrime(9));
